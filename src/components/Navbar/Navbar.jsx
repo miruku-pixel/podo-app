@@ -9,6 +9,7 @@ const Navbar = ({
   signatureDishRef,
   menuRef,
   storeLocationRef,
+  aboutUsRef,
   testimonialRef,
 }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -47,10 +48,17 @@ const Navbar = ({
     },
     {
       id: 5,
-      title: "Testimoni",
-      ref: testimonialRef,
+      title: "Tentang Kami",
+      ref: aboutUsRef,
       offset: -110,
       delay: 0.5,
+    },
+    {
+      id: 6,
+      title: "Testimoni",
+      ref: testimonialRef,
+      offset: -120,
+      delay: 0.6,
     },
   ];
 

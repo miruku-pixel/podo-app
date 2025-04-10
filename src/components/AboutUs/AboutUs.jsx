@@ -1,12 +1,12 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import BannerPng from "../../assets/food/ayam-bakar.png";
 import { SlideUp } from "../Hero/Hero";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 
-const Banner = () => {
+const AboutUs = forwardRef((props, ref) => {
   return (
-    <section>
+    <section ref={ref}>
       <div className="container py-24">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-14 place-items-center">
           {/* Image section */}
@@ -88,6 +88,6 @@ const Banner = () => {
       </div>
     </section>
   );
-};
+});
 
-export default Banner;
+export default AboutUs;

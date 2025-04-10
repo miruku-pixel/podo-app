@@ -10,6 +10,7 @@ const FloatingNavbarWrapper = ({
   signatureDishRef,
   menuRef,
   storeLocationRef,
+  aboutUsRef,
   testimonialRef,
 }) => {
   const [isFloating, setIsFloating] = useState(false);
@@ -45,7 +46,8 @@ const FloatingNavbarWrapper = ({
     { id: 2, title: "Menu Andalan", ref: signatureDishRef, delay: 0.2 },
     { id: 3, title: "Menu", ref: menuRef, delay: 0.3 },
     { id: 4, title: "Lokasi Warung", ref: storeLocationRef, delay: 0.4 },
-    { id: 5, title: "Testimoni", ref: testimonialRef, delay: 0.5 },
+    { id: 5, title: "Tentang Kami", ref: aboutUsRef, delay: 0.5 },
+    { id: 6, title: "Testimoni", ref: testimonialRef, delay: 0.6 },
   ];
 
   const SlideDown = (delay) => ({
@@ -69,11 +71,12 @@ const FloatingNavbarWrapper = ({
             initial="initial"
             animate="animate"
             exit="exit"
-            className="border-2 border-light-yellow font-mont-alter fixed top-2 left-1/2 -translate-x-1/2 z-50
-             bg-white-2/80 backdrop-blur-md shadow-xl drop-shadow rounded-full p-2 md:p-2 flex justify-between"
+            className="fixed top-4 left-1/2 -translate-x-1/2 z-50
+                    bg-white-2/90 backdrop-blur-md border border-light-yellow shadow-md 
+                    rounded-[2rem] px-6 py-2 flex items-center"
           >
             <div className="hidden md:block">
-              <ul className="flex gap-16">
+              <ul className="flex gap-6 md:gap-10 items-center">
                 {NavMenu.map((menu) => (
                   <motion.li
                     variants={SlideDown(menu.delay)}
@@ -89,7 +92,7 @@ const FloatingNavbarWrapper = ({
                         e.preventDefault();
                         scrollToSection(menu.ref);
                       }}
-                      className="inline-block px-2 py-2 text-xl hover:text-dark-green"
+                      className="text-sm md:text-base font-mont-alter tracking-tight font-medium hover:text-dark-green px-1.5 py-1"
                     >
                       {menu.title}
                     </a>

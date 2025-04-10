@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import SignatureDish from "./components/Signature-Dish/Signature-Dish";
-import Banner from "./components/Banner/Banner";
+import AboutUs from "./components/AboutUs/AboutUs";
 import FoodMenu from "./components/FoodMenu/FoodMenu";
 import Testimonial from "./components/Testimonial/Testimonial";
 import StoreLocation from "./components/StoreLocation/StoreLocation";
@@ -15,6 +15,7 @@ const App = () => {
   const signatureDishRef = useRef(null);
   const foodMenuRef = useRef(null);
   const storeLocationRef = useRef(null);
+  const aboutUsRef = useRef(null);
   const testimonialRef = useRef(null);
   const [originalNavbarVisible, setOriginalNavbarVisible] = useState(true);
 
@@ -41,6 +42,7 @@ const App = () => {
       signatureDishRef={signatureDishRef}
       menuRef={foodMenuRef}
       storeLocationRef={storeLocationRef}
+      aboutUsRef={aboutUsRef}
       testimonialRef={testimonialRef}
     >
       <div className="overflow-x-hidden bg-white-2 text-dark">
@@ -52,6 +54,7 @@ const App = () => {
               signatureDishRef={signatureDishRef}
               menuRef={foodMenuRef}
               storeLocationRef={storeLocationRef}
+              aboutUsRef={aboutUsRef}
               testimonialRef={testimonialRef}
             />
           </div>
@@ -64,6 +67,7 @@ const App = () => {
                 signatureDishRef={signatureDishRef}
                 menuRef={foodMenuRef}
                 storeLocationRef={storeLocationRef}
+                aboutUsRef={aboutUsRef}
                 testimonialRef={testimonialRef}
               />
             </div>
@@ -74,11 +78,10 @@ const App = () => {
           </div>
         </div>
         <SignatureDish ref={signatureDishRef} />
-        <Banner />
         <FoodMenu ref={foodMenuRef} />
         <StoreLocation ref={storeLocationRef} />
+        <AboutUs ref={aboutUsRef} />
         <Testimonial ref={testimonialRef} />
-
         <Footer />
       </div>
     </FloatingNavbarWrapper>
