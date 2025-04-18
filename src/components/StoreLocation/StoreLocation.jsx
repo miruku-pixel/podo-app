@@ -1,6 +1,8 @@
 import React, { forwardRef } from "react";
 import Manado from "../../assets/food/cabang-manado.jpg";
 import ComingSoon from "../../assets/food/coming-soon.jpg";
+import OrderLinks from "../OrderLinks/OrderLinks";
+import { FaUtensils } from "react-icons/fa";
 
 const StoreLocation = forwardRef((props, ref) => {
   const stores = [
@@ -22,6 +24,14 @@ const StoreLocation = forwardRef((props, ref) => {
     },
     {
       id: 3,
+      name: "RM PODO (Batam)",
+      address: "coming soon",
+      googleMapsLink:
+        "https://www.google.com/maps/place/789+River+Road,+Villagetown",
+      image: ComingSoon, // Add image path
+    },
+    {
+      id: 4,
       name: "RM PODO (Batam)",
       address: "coming soon",
       googleMapsLink:
@@ -53,14 +63,7 @@ const StoreLocation = forwardRef((props, ref) => {
               />
             </div>
             <p className="mb-2">{store.address}</p>
-            <a
-              href={store.googleMapsLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-500 hover:underline"
-            >
-              Open in Google Maps
-            </a>
+            <OrderLinks />
           </div>
         ))}
       </div>
