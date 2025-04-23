@@ -45,7 +45,7 @@ const StoreLocation = forwardRef((props, ref) => {
       <h2 className="text-4xl text-center font-mont-alter font-semibold uppercase py-8">
         Lokasi Kami
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8">
         {stores.map((store) => (
           <div
             key={store.id}

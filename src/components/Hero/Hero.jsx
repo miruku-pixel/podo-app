@@ -26,7 +26,9 @@ const Hero = forwardRef((props, ref) => {
   return (
     <main ref={ref} className="pt-20">
       <div className="container min-h-[600px] flex justify-center relative z-10">
-        <div className="grid grid-cols-2 md:grid-cols-2 gap-12 lg:gap-24 place-items-center justify-between">
+        <div /*className="grid grid-cols-2 md:grid-cols-2 gap-12 lg:gap-24 place-items-center justify-between"*/
+          className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 place-items-center justify-between"
+        >
           {/*text content here*/}
           <div className="space-y-3 mt-14 text-center md:text-left md:mt-0">
             <motion.h1
@@ -76,25 +78,25 @@ const Hero = forwardRef((props, ref) => {
               transition={{ duration: 0.8 }}
               src={FoodPng}
               alt="Food"
-              className="w-[450px] img-shadow"
+              className="opacity-0 md:opacity-100 w-[280px] md:w-[450px] img-shadow"
             />
 
             <motion.img
+              src={Spoon}
+              alt="Spoon"
               initial={{ opacity: 0, rotate: 80, x: 200, y: 100 }}
               whileInView={{ opacity: 1, rotate: -80, x: 30, y: -120 }}
               transition={{ duration: 0.8 }}
-              src={Spoon}
-              alt="Spoon"
-              className="w-[400px] absolute top-[-30px] right-[-130px] md:right-[-160px] img-shadow"
+              className="hidden md:block w-[400px] absolute top-[-30px] right-[-130px] md:right-[-160px] img-shadow"
             />
 
             <motion.img
+              src={Fork}
+              alt="Fork"
               initial={{ opacity: 0, rotate: 80, x: 100, y: 200 }}
               whileInView={{ opacity: 1, rotate: 150, x: -90, y: 20 }}
               transition={{ duration: 0.8 }}
-              src={Fork}
-              alt="Fork"
-              className="w-[350px] absolute bottom-[-120px] -left-16 rotate-[75deg] img-shadow"
+              className="hidden md:block w-[350px] absolute bottom-[-120px] -left-16 rotate-[75deg] img-shadow"
             />
           </div>
         </div>

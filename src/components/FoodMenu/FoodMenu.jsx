@@ -136,7 +136,7 @@ const FoodMenu = forwardRef((props, ref) => {
             animate="animate"
             exit="exit"
             transition={{ duration: 0.3 }}
-            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 place-items-center"
+            className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 place-items-center"
             {...swipeHandlers} // Apply swipe handlers
           >
             {currentCards.map((item, index) => (
